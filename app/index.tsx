@@ -4,6 +4,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { images,offers } from "@/constants";
 import { Fragment } from "react";
 import cn from 'clsx';
+import CartButton from "@/components/CartButton";
 
 
  
@@ -57,7 +58,7 @@ export default function index () {
              <Image source={images.arrowDown} className="size-3" resizeMode="contain" />
              </TouchableOpacity>
          </View>
-         <Text>Cart</Text>
+         <CartButton/>
        </View>
            
          )}
