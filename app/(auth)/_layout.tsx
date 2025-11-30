@@ -1,11 +1,13 @@
-import { View, Text } from 'react-native'
+import { View, Text, KeyboardAvoidingView, Platform, ScrollView } from 'react-native'
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Slot } from 'expo-router';
 export default function _Layout() {
   return (
-    <SafeAreaView>
-          <Text>Auth Layout</Text>
+    <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : 'height'} >
+      <ScrollView className='bg-white h-full' keyboardShouldPersistTaps='handled'>
+        
+          </ScrollView>
           <Slot/>
-    </SafeAreaView>
+    </KeyboardAvoidingView>
   )
 }
